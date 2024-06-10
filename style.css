@@ -401,9 +401,9 @@ h2 {
 }
 
 /* h2::before { it looks exactly the same 
-but the DIFFERENCE between h2::before and h2::after => 
-::after will become the very last child element of the one we are selecting here!
-::before will become the very first child element of the one we are selecting here! */
+  but the DIFFERENCE between h2::before and h2::after => 
+  ::after will become the very last child element of the one we are selecting here!
+  ::before will become the very first child element of the one we are selecting here! */
 h2::after {
   /* It is mandatory to define the content, even without initial value, although we declared it here as TOP! */
   content: "TOP";
@@ -422,60 +422,64 @@ h2::after {
   right: -25px;
 }
 
+/* NOTE: I disable the entire float layout here to do the same using Flexbox:*/
 /*Float Layouts*/
-.author-img {
-  float: left; /*text in paragraph will float around the image!*/
-  margin-bottom: 20px;
-}
+/* .author-img { */
+/* float: left; text in paragraph will float around the image! */
+/* margin-bottom: 20px; */
+/* } */
 
-.author {
+/* .author {
   float: left;
   margin-top: 10px;
   margin-left: 20px;
-}
+} */
 
-h1 {
-  float: left; /*but now, we lose the height of our background and that's because of the float property!*/
-}
+/* h1 { */
+/* float: left; but now, we lose the height of our background and that's because of the float property! */
+/* } */
 
-nav {
+/* nav {
   float: right;
-}
+} */
 
-.clear {
-  /* padding: 20px; */
-  /*we have above both left and right float and it makes our background smaller. To prevent that, and still keep effects of float which is to have the nav elements around h1 element, we use clear property below and set it to the both because we have both right and left for float!
-  FLOAT IS ALREADY OUTDATED!*/
-  clear: both;
-}
+/* .clear { */
+/* padding: 20px; */
+/*we have above both left and right float and it makes our background smaller. To prevent that, and still keep effects of float which is to have the nav elements around h1 element, we use clear property below and set it to the both because we have both right and left for float!
+      FLOAT IS ALREADY OUTDATED!*/
+/* clear: both; */
+/* } */
 
 /*HOW TO CLEAR FLOAT IN FLOAT LAYOUTS USING CLEARFIX CLASS HACK:*/
 /*we use clearfix as a substitution solution to avoid writing an empty div like this: <div class="clear"></div>
-::after as Pseudo element will create an new element which is the last child element of the container, this does the empty div as last child element for us automatically without to write this empty div there manually! that's why i commented already this empty div in html out!  */
-.clearfix::after {
-  clear: both;
-  content: ""; /*we have to write something here for content even if it is an empty text!*/
-  /*Pseudo element like before and after are inline element but clearing Float only works when it is an block element, that's why we have to change its default display as inline to block!*/
-  display: block;
-}
+      ::after as Pseudo element will create an new element which is the last child element of the container, this does the empty div as last child element for us automatically without to write this empty div there manually! that's why i commented already this empty div in html out!  */
+/* .clearfix::after {
+  clear: both; */
+/* content: ""; we have to write something here for content even if it is an empty text! */
+/*Pseudo element like before and after are inline element but clearing Float only works when it is an block element, that's why we have to change its default display as inline to block!*/
+/* display: block; */
+/* } */
 
-article {
-  /* background-color: green; */
-  width: 825px; /*i changed it from 900px to 825px to make a 75px gap between article and aside. Now, when i change the float in aside from right to left, the aside will float around the article to the left and when we keep it as it is now => right, it will stay at right position!*/
-  float: left;
-}
+/* article { */
+/* background-color: green; */
+/* width: 825px; i changed it from 900px to 825px to make a 75px gap between article and aside. Now, when i change the float in aside from right to left, the aside will float around the article to the left and when we keep it as it is now => right, it will stay at right position! */
+/* float: left; */
+/* } */
 
-aside {
-  /* background-color: red; */
-  width: 300px;
-  /* margin-left: 50px; */
-  float: right;
-}
+/* aside { */
+/* background-color: red; */
+/* width: 300px; */
+/* margin-left: 50px; */
+/* float: right; */
+/* } */
 
 /*we don't need now to create a new empty div or use a clearfix class like what we did already, we can add all the above parameters or just one parameter => clear: both; simply in footer, because footer is the element on which we want to clear the float and it is already available there! => we don't want that footer floats around the aside element to the top and right side, rather, we want that it stays in its place in the footer, so, we need to clear its float feature, therefore, we add only clear: both; to footer*/
-footer {
-  /* background-color: yellow; */
-  clear: both;
-  /* content: ""; */
-  /* display: block; */
-}
+/* footer { */
+/* background-color: yellow; */
+/* clear: both; */
+/* content: ""; */
+/* display: block; */
+/* } */
+
+/*NOTE: Flexbox Layout: => do the same thing like what we did above but with Flexbox:*/
+
