@@ -490,3 +490,18 @@ h2::after {
   align-items: center; /* align vertically*/
   justify-content: space-between; /*align horizontally => push every item to the right or left and divide the remaining space between them!*/
 }
+
+/*again the same question here: what is the parent element of the Laura image and the sentence below that? maybe class=post-header? NO, because it is the parent element not only for this two elements, but also for other elements, that'S why, it will not work with this calss!
+
+SOLUTION: we have to use an empty div with class= author-box only for this two elements in index.html! */
+
+.author-box {
+  display: flex;
+  align-items: center; /* align both items vertically*/
+  margin-bottom: 15px; /*a small distance between both items and the image below them*/
+}
+
+.author {
+  margin-bottom: 0; /*inspite of align-items: center; but the image and the sentence are not still vertically aligned and the sentence has some margin-bottom and after setting that to zero, both of them are aligned vertically!*/
+  margin-left: 15px; /*a small distance between both of them!*/
+}
