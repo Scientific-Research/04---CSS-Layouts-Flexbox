@@ -48,9 +48,17 @@
 
         /*ALIGN HORIZONTALLY align MAIN AXIS*/
         justify-content: flex-start;
+        gap: 30px; /*Instead of writing margin-right: 30px; below, I use GAP here!
+        ADVANTAGE: GAP doesn't produce any margin-left or right. It is only GAP!*/
       }
 
       /*OPERATIONS ON FLEX ITEMS*/
+      .el {
+        /*REPLACING margin-right: 30px; WITH GAP PROPERTY IN FLEX CONTAINER ABOVE!*/
+        /* margin-right: 30px; creating manually space between flex items, 
+        it has one DISADVANTAGE: I have to remove the margin-right from the last flex item in very last item on the right side, but when i use GAP, I don't need to do that, because GAP doesn't produce margin-right or left for flex items! */
+      }
+
       .el--1 {
         align-self: flex-start; /*only first element(HTML) moves to the very top!*/
         /* order: 2; */
