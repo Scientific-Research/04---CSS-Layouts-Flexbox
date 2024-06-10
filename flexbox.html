@@ -48,20 +48,35 @@
 
         /*ALIGN HORIZONTALLY align MAIN AXIS*/
         justify-content: flex-start;
-        gap: 30px; /*Instead of writing margin-right: 30px; below, I use GAP here!
+        gap: 30px;
+        /*Instead of writing margin-right: 30px; below, I use GAP here!
         ADVANTAGE: GAP doesn't produce any margin-left or right. It is only GAP!*/
       }
 
       /*OPERATIONS ON FLEX ITEMS*/
       .el {
         /*REPLACING margin-right: 30px; WITH GAP PROPERTY IN FLEX CONTAINER ABOVE!*/
-        /* margin-right: 30px; creating manually space between flex items, 
+        /* margin-right: 30px; creating manually space between flex items,
         it has one DISADVANTAGE: I have to remove the margin-right from the last flex item in very last item on the right side, but when i use GAP, I don't need to do that, because GAP doesn't produce margin-right or left for flex items! */
+
+        /* DEFAULT VALUES FOR FLEX ITEMS:
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto; */
+
+        /*Instead of using flex width for every flex item, we can use flex-basis for every flex item! */
+        /* flex-basis: 200px;  */
+        /*flex-shrink is set to 1 as default, that's why when i set the flex-basis to 200px, this will not work and flex try its best to shrink the items in order to fit all the them in flex-container - when we don't want that, we have to set the shrink to 0! but the items no longer fits the container!*/
+        flex-shrink: 0;
+        flex-grow: 1;
+        /*they filled up the entire flex container! => divided evenly the remaining space between all the flex items!*/
       }
 
       .el--1 {
         align-self: flex-start; /*only first element(HTML) moves to the very top!*/
         /* order: 2; */
+        /* flex-grow: 1; */
+        /*first of all, all the flex items except first item take the place they need and then the first element(HTML) takes the remaning space! */
       }
 
       .el--5 {
