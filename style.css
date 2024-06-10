@@ -93,7 +93,7 @@ nav a:link {
   /* NOTE: a is an inline element as default => we don't need to mention this: display:inline, that's why only right and left paddings and margins work and not top and bottom. when i want to use top and bottom for margin and padding, I have to use inline-block for display => display: inline-block */
   display: inline-block;
   margin-right: 30px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   /* text-align: center; to bring the li elements in center of the nav, we have to apply this statement: text-align: center; to the parent of the li elements => nav element! => because nav is a block element. if we apply that to the li elements, it will not work! because it is a inline-block element and not a block element!  */
 }
 
@@ -483,3 +483,10 @@ h2::after {
 
 /*NOTE: Flexbox Layout: => do the same thing like what we did above but with Flexbox:*/
 
+/*what is the parent element of The Code Magazine => h1 and nav elements? => it is header with class= main-header*/
+
+.main-header {
+  display: flex;
+  align-items: center; /* align vertically*/
+  justify-content: space-between; /*align horizontally => push every item to the right or left and divide the remaining space between them!*/
+}
