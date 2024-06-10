@@ -206,8 +206,10 @@ li:last-child {
 }
 
 .related-author {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 0; /*there is an internal margin-bottóm that we have to remove it, otherwise, this align-items: center; in flexbox can not align both p and href vertically together!  */
+  font-style: italic;
 }
 
 .related-posts {
@@ -502,6 +504,25 @@ SOLUTION: we have to use an empty div with class= author-box only for this two e
 }
 
 .author {
-  margin-bottom: 0; /*inspite of align-items: center; but the image and the sentence are not still vertically aligned and the sentence has some margin-bottom and after setting that to zero, both of them are aligned vertically!*/
+  margin-bottom: 0; /*inspite of align-items: center; but the image and the sentence are not still vertically aligned and the sentence has some internal margin-bottom and after setting that to zero, both of them are aligned vertically!*/
   margin-left: 15px; /*a small distance between both of them!*/
+}
+
+/*again the same question here: we want to put ancher, p and img in related posts section together, that's why we need to specify class to every li element(related-post class) in this ul with related-posts class! 
+
+We need also three div around both ancher and p to place them around image using flxebox, otherwise, they will not be beside each other as expected!
+*/
+
+.related-post {
+  display: flex;
+  align-items: center;
+}
+
+/*some CSS styles for link in li => we have to write it using Pseudo class!*/
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px; /*this will not work here, because ancher is an inline element and vertical alignment like margin&padding top and bottom will not work! => SOLUTION: we have to change the display from inline to block!*/
+  display: block;
 }
