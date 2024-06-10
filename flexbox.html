@@ -67,16 +67,19 @@
         /*Instead of using flex width for every flex item, we can use flex-basis for every flex item! */
         /* flex-basis: 200px;  */
         /*flex-shrink is set to 1 as default, that's why when i set the flex-basis to 200px, this will not work and flex try its best to shrink the items in order to fit all the them in flex-container - when we don't want that, we have to set the shrink to 0! but the items no longer fits the container!*/
-        flex-shrink: 0;
-        flex-grow: 1;
-        /*they filled up the entire flex container! => divided evenly the remaining space between all the flex items!*/
+        /* flex-shrink: 0; */
+        /* flex: 0 0 200px; */
+        /* flex-grow: 1; */
+        /* when flex-grow is 0, every flex item takes the space what they need and then there is still some space remaining, when i change it to 1, this remaning space will divide evenly between all the flex items!*/
+        flex: 1; /*grow-shrink-basis*/
       }
 
       .el--1 {
         align-self: flex-start; /*only first element(HTML) moves to the very top!*/
         /* order: 2; */
-        /* flex-grow: 1; */
-        /*first of all, all the flex items except first item take the place they need and then the first element(HTML) takes the remaning space! */
+        /* flex-grow: 2; */
+        /*first of all, all the flex items except first item take the place they need and then the first element(HTML) takes the remaning space! 
+        When it is 2 => it takes double of available empty space than other items => it looks like bigger than other items*/
       }
 
       .el--5 {
