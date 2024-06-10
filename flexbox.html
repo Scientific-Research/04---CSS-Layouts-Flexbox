@@ -53,10 +53,18 @@
       /*OPERATIONS ON FLEX ITEMS*/
       .el--1 {
         align-self: flex-start; /*only first element(HTML) moves to the very top!*/
+        /* order: 2; */
       }
 
       .el--5 {
         align-self: stretch;
+        order: 1;
+      }
+
+      .el--6 {
+        /*It behaves like a normal Mathematic axis: <--_4--_3--_2--_1--0--1--3--3--4-->*/
+        /* order: -1; for negative values, it goes to the very first position(left side)! */
+        order: -1; /*for positive values, it goes to the very last position(right side)!*/
       }
     </style>
   </head>
