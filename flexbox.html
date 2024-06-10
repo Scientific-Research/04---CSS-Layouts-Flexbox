@@ -39,12 +39,15 @@
         font-size: 40px;
         margin: 40px;
 
-        /* FLEXBOX */
+        /* FLEXBOX => placing display: flex; on a class which has some children like our class container below!*/
+        display: flex; /*using display:flex => the elements are now side by side without using Floats property that we used already!*/
       }
     </style>
   </head>
   <body>
+    <!-- flex container -->
     <div class="container">
+      <!-- 8 child elements are flex items -->
       <div class="el el--1">HTML</div>
       <div class="el el--2">and</div>
       <div class="el el--3">CSS</div>
