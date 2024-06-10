@@ -516,6 +516,8 @@ We need also three div around both ancher and p to place them around image using
 .related-post {
   display: flex;
   align-items: center;
+  gap: 20px; /*to make some vertical distance between image and other two elements*/
+  margin-bottom: 30px; /*to make some horizontal distance between every three elements with other three ones => between every li*/
 }
 
 /*some CSS styles for link in li => we have to write it using Pseudo class!*/
