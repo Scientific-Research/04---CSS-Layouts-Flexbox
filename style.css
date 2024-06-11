@@ -545,3 +545,7 @@ aside {
   flex-basis: auto; */
   flex: 0 0 300px; /*grow shrink basis => the flex-grow stays as default - the flex-shrink is deactivated, otherwise, we can not get the 300px width - when shrink is 1(is ON) => it will shrink(minimize) the width automatically, and that is exactly we don't want!*/
 }
+
+article {
+  flex: 0 0 825px; /* article is a flex item now and to change the width, we have to use flex and not with anymore like what we have done for aside above! => grow: 0, shrink: 0 (important - default is 1)*/
+}
