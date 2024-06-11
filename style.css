@@ -119,6 +119,7 @@ aside {
   /* padding-top: 50px;
   padding-bottom: 50px; */
   padding: 50px 40px;
+  width: 300px;
 }
 
 h1,
@@ -527,4 +528,10 @@ We need also three div around both ancher and p to place them around image using
   font-style: normal;
   margin-bottom: 5px; /*this will not work here, because ancher is an inline element and vertical alignment like margin&padding top and bottom will not work! => SOLUTION: we have to change the display from inline to block!*/
   display: block;
+}
+
+.complete-page-without-nav {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
 }
