@@ -55,6 +55,14 @@
 
         grid-template-rows: 300px 200px; /*row is => HEIGHT of the element!*/
         /*for the green element, the defined height overwrite the 300px, that's why it will no fill its entire content out!*/
+
+        /*like in Flexbox, we can specify GAP in CSS GRID and use it instead of margin-top and bottom => This is the only way to specify distance between GRID ITEMS - MARGIN will NEVER work here!*/
+        /*gap or grid-gap => both are the same!*/
+        /* gap: 30px; This will create 30px distance(gap) between both columns and rows */
+
+        /*DEFINING SEPARATE GAP FOR COLUMNS AND ROWS => THIS WAS NOT POSSIBLE FOR FLEXBOX, BUT IS IS POSSIBLE IN CSS GRID:*/
+        column-gap: 30px;
+        row-gap: 60px;
       }
 
       .container--2 {
