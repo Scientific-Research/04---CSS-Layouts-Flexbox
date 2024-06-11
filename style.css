@@ -530,6 +530,7 @@ We need also three div around both ancher and p to place them around image using
   display: block;
 }
 
+/*Once again, the first question:what is the parent element(Flex container) of both main-page section(article section) plus aside section? Is it the element with container class?NO, this is not our flex container that we are looking for!Instead, we have to create a new one which is quite common! => a new flex conatiner!*/
 .complete-page-without-nav {
   display: flex;
   align-items: flex-start;
