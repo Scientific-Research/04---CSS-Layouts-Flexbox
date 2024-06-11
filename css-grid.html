@@ -50,7 +50,11 @@
         grid-template-columns: 250px 150px; /*This produces two columns => one with width:250px and the second one with:150px*/
 
         /*A Grid with four columns - rows are produced as much as necessary to accomodate all contents!*/
-        grid-template-columns: 250px 250px 150px 150px;
+        grid-template-columns: 250px 250px 150px 150px; /*column is => WIDTH of the element!*/
+        /*Like Flexbox, elements are strechted and get the height of heighest element in container, for example here, all the elements in first row, get the height of green element, because it has the highest height betwenn all elements in first row! */
+
+        grid-template-rows: 300px 200px; /*row is => HEIGHT of the element!*/
+        /*for the green element, the defined height overwrite the 300px, that's why it will no fill its entire content out!*/
       }
 
       .container--2 {
