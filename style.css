@@ -119,7 +119,6 @@ aside {
   /* padding-top: 50px;
   padding-bottom: 50px; */
   padding: 50px 40px;
-  width: 300px;
 }
 
 h1,
@@ -535,4 +534,14 @@ We need also three div around both ancher and p to place them around image using
   display: flex;
   align-items: flex-start;
   gap: 75px;
+}
+
+aside {
+  /* width: 300px; width will not work here anymore because aside is a flex element now and not a normal element, that's why we have to use flex-basis instead of width */
+
+  /* DEFAULT VALUES FOR FLEX ITEMS:
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto; */
+  flex: 0 0 300px; /*grow shrink basis => the flex-grow stays as default - the flex-shrink is deactivated, otherwise, we can not get the 300px width - when shrink is 1(is ON) => it will shrink(minimize) the width automatically, and that is exactly we don't want!*/
 }
