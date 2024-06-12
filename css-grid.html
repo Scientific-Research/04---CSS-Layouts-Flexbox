@@ -67,8 +67,12 @@
         grid-template-columns: repeat(4, 1fr);
         /*This is equivalent to write 1fr four times => using repeat() to write it short as possible!*/
 
-        grid-template-columns: repeat(3, 1fr);
-        /*We will have now three rows: the first two rows are called explicit rows because we have defined them explicitely, one is 300px and another one is 200px. The third row called implicit row because it was created automatically, because we ran out of the space in Grid that we already defined!*/
+        /* grid-template-columns: repeat(3, 1fr); */
+        /*We will have now three rows: the first two rows are called explicit rows because we have defined them explicitely, one is 300px and another one is 200px. The third row called implicit row because it was created automatically, because we ran out of the space in Grid that we already defined!
+        BUT ACTUALLY IN PRACTICE, MOST OF THE TIME WE DEFINE THE EXPLICIT GRIDS WITH TWO PROPERTIES WHICH WILL NOT RUN OUT OF THE SPACE IN GRID THAT WE ALREADY DEFINED LIKE:
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 300px 200px;
+        */
 
         /* grid-template-columns: 2fr 1fr 1fr 1fr; the total space is divided to 5 fractions */
 
