@@ -53,6 +53,12 @@
         grid-template-columns: 250px 250px 150px 150px; /*column is => WIDTH of the element!*/
         /*Like Flexbox, elements are strechted and get the height of heighest element in container, for example here, all the elements in first row, get the height of green element, because it has the highest height betwenn all elements in first row! */
 
+        /*using fr:fractional or fraction for third element instead of 150px => IN THIS CASE, THE THIRD ELEMENT WOULD BE FLEXIBLE(AND NOT 150px ANYMORE) AND FILL ALL THE REMAINING SPACE OUT => THIS IS LIKE WHEN WE SET FLEX = 1 in FLEXBOX!*/
+        grid-template-columns: 250px 250px 1fr 150px;
+
+        /*the third and fourth grid elements are 1fr => it means they have the same size of fr unit which is 1fr => they will fill the remaining space equally out and not 150px anymore! and when i change the page size, they tries to fill the page equally together out!*/
+        grid-template-columns: 250px 250px 1fr 1fr;
+
         grid-template-rows: 300px 200px; /*row is => HEIGHT of the element!*/
         /*for the green element, the defined height overwrite the 300px, that's why it will no fill its entire content out!*/
 
