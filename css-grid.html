@@ -105,6 +105,15 @@
         row-gap: 60px;
       }
 
+      /*TO PLACE THE GRID ITEM NO.8 IN THE PLACE OF GRID ITEM NO.2:
+      WE HAVE TO USE GRID-COLUMN AND GRID-ROW WHICH ARE DEALING WITH GRID ITEMS. 
+      REWRITING THE PARAMETERS FOR GRID ITEM NO.8:
+      */
+      .el--8 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+
       .container--2 {
         display: none; /*It will not display container--2 content on the broswer and now we see only the results of container--1 on the browser!*/
 
