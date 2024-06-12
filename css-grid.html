@@ -62,9 +62,11 @@
         /* All four columns with the same size! when i change the page size, all four columns change its size together! they all try to fill up the all available space with the same portion! the total available space divide to 4 fractions and get the equal space!*/
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
-        grid-template-columns: 2fr 1fr 1fr 1fr; /*the total space is divided to 5 fractions */
+        grid-template-columns: 1fr 1fr 1fr auto; /*auto takes the necessary space which it needs for fourth grid element!*/
 
-        grid-template-columns: 3fr 1fr 1fr 1fr; /*the total space is divided to 6 fractions and first one occupies half of the total space and the remaining space divided to 3 fractions!*/
+        /* grid-template-columns: 2fr 1fr 1fr 1fr; the total space is divided to 5 fractions */
+
+        /* grid-template-columns: 3fr 1fr 1fr 1fr; the total space is divided to 6 fractions and first one occupies half of the total space and the remaining space divided to 3 fractions! */
 
         /*All three columns with the same size! and when i change the page, all three columns change its sizes at the same time! */
         /* grid-template-columns: 1fr 1fr 1fr; */
