@@ -67,6 +67,9 @@
         grid-template-columns: repeat(4, 1fr);
         /*This is equivalent to write 1fr four times => using repeat() to write it short as possible!*/
 
+        grid-template-columns: repeat(3, 1fr);
+        /*We will have now three rows: the first two rows are called explicit rows because we have defined them explicitely, one is 300px and another one is 200px. The third row called implicit row because it was created automatically, because we ran out of the space in Grid that we already defined!*/
+
         /* grid-template-columns: 2fr 1fr 1fr 1fr; the total space is divided to 5 fractions */
 
         /* grid-template-columns: 3fr 1fr 1fr 1fr; the total space is divided to 6 fractions and first one occupies half of the total space and the remaining space divided to 3 fractions! */
