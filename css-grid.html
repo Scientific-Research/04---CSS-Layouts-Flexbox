@@ -111,19 +111,33 @@
       */
       .el--8 {
         grid-column: 2/3;
-        grid-row: 1/2;
+
+        /* grid-row: 1/2; */
+        grid-row: 1/3; /*cell 8 spans two rows!*/
+
+        /*OR EXACTLY THE SAME LIKE FOLLOWING using -1:*/
+        grid-row: 1/-1; /*cell 8 spans two(all) rows!*/
+
+        /*OR EXACTLY THE SAME LIKE FOLLOWING using span:*/
+        grid-row: 1 / span 2; /*cell 8 spans two(all) rows!*/
       }
 
       /*place the second item in the place of fourth item(cell):*/
       .el--2 {
         /* grid-column: 1/3; now, this item spans across two cells => it occupies two cells! */
         /*OR THE FOLLOWING => THEY ARE EXACTLY THE SAME:*/
-        grid-column: 1 / span 2; /*now, this item spans across two cells => it occupies two cells => INSTEAD OF WRITING A NUMBER, WE USE SPAN WORD WITH THE NUMBER OF CELLS => span 2*/
+        /* grid-column: 1 / span 2; now, this item spans across two cells => it occupies two cells => INSTEAD OF WRITING A NUMBER, WE USE SPAN WORD WITH THE NUMBER OF CELLS => span 2 */
 
-        grid-column: 1 / -1; /*It spans(covers) all the row cells from beginning till end!*/
+        grid-column: 1 / -1;
+        /* It spans(covers) all the row cells from beginning till end! */
         /* grid-column: 2 / -1; It spans(covers) all the row cells from second column cells till end! */
 
         grid-row: 2/3;
+      }
+
+      /*changing the place of (6) languages*/
+      .el--6 {
+        /* grid-row: 3/6; */
       }
 
       .container--2 {
