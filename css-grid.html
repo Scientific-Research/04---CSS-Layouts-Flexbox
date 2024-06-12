@@ -60,9 +60,12 @@
         grid-template-columns: 250px 250px 1fr 1fr;
 
         /* All four columns with the same size! when i change the page size, all four columns change its size together! they all try to fill up the all available space with the same portion! the total available space divide to 4 fractions and get the equal space!*/
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
 
-        grid-template-columns: 1fr 1fr 1fr auto; /*auto takes the necessary space which it needs for fourth grid element!*/
+        /* grid-template-columns: 1fr 1fr 1fr auto; auto takes the necessary space which it needs for fourth grid element! */
+
+        grid-template-columns: repeat(4, 1fr);
+        /*This is equivalent to write 1fr four times => using repeat() to write it short as possible!*/
 
         /* grid-template-columns: 2fr 1fr 1fr 1fr; the total space is divided to 5 fractions */
 
