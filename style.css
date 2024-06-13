@@ -569,6 +569,8 @@ We need also three div around both ancher and p to place them around image using
   the size of aside is 300px and we use 1fr to assign the remaining space to the article!
   */
   grid-template-columns: 1fr 300px;
+  column-gap: 75px; /*the distance between article and aside columns!*/
+  /*THE ENTIRE LENGTH OF THE PAGE IS: 790px(header) + 75px(gap) + 300px(aside) = 1165px*/
 }
 
 .main-header {
