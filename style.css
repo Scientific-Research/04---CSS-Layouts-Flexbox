@@ -585,5 +585,7 @@ aside {
 }
 
 footer {
-
+  /* background-color: red; TO SEE IN WHICH CELLS FOOTER IS EXTENDED => ONLY FOR TEST PURPOSE!*/
+  grid-column: 1/-1;
+  /*We want that the footer goes all the way from left to right exactly like main-header - it stretches all the way down there!*/
 }
