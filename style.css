@@ -574,6 +574,9 @@ We need also three div around both ancher and p to place them around image using
   /*THE ENTIRE LENGTH OF THE PAGE IS: 790px(header) + 75px(gap) + 300px(aside) = 1165px*/
 
   row-gap: 60px; /*we set the margin-bottom to zero both for article and main-header to use row-gap here as a feature from GRID to do exactly the same for us!*/
+
+  /* align-items: start; => This will align the items in aside cell at the beginning 
+  I DID THE SAME IN ASIDE SECTION BELOW USING align-self: self-start;*/
 }
 
 .main-header {
@@ -589,6 +592,16 @@ article {
 }
 
 aside {
+  /*How we rearrange the aside item inside its cell? We use one of the item properties:
+  justify-item or align-item?
+  IN CASE OF VERTICAL SPACE => we use align-item
+  IN CASE OF HORIZONTAL SPACE => we use justify-content*/
+
+  align-self: self-start; /*align the aside item at the beginning!*/
+  /*OR WE CAN USE THIS => align-items: start; IN CONTAINER - THIS WILL NOT WORK HERE!*/
+  /* align-items: start; */
+
+  /* align-self: self-end  => align the aside item at the bottom!*/
 }
 
 footer {
