@@ -103,12 +103,15 @@
         /*DEFINING SEPARATE GAP FOR COLUMNS AND ROWS => THIS WAS NOT POSSIBLE FOR FLEXBOX, BUT IS IS POSSIBLE IN CSS GRID:*/
         column-gap: 30px;
         row-gap: 60px;
+        /*AS TEMPORARY*/
+        display: none;
       }
 
       /*TO PLACE THE GRID ITEM NO.8 IN THE PLACE OF GRID ITEM NO.2:
       WE HAVE TO USE GRID-COLUMN AND GRID-ROW WHICH ARE DEALING WITH GRID ITEMS. 
       REWRITING THE PARAMETERS FOR GRID ITEM NO.8:
       */
+
       .el--8 {
         grid-column: 2/3;
 
@@ -141,7 +144,7 @@
       }
 
       .container--2 {
-        display: none; /*It will not display container--2 content on the broswer and now we see only the results of container--1 on the browser!*/
+        /* display: none; It will not display container--2 content on the broswer and now we see only the results of container--1 on the browser! */
 
         /* STARTER */
         font-family: sans-serif;
@@ -153,6 +156,12 @@
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        /*create a GRID 3*2*/
+        /* grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr); */
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
       }
     </style>
   </head>
