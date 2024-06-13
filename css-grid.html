@@ -198,6 +198,14 @@
         ALIGN IS VERTICALLY ON THE COULMN AXIS        
         */
       }
+
+      /*Like flexbox, we can overwrite the features of every item that we defined already:*/
+      .el--3 {
+        align-self: end; /* just like in flexbox => This overwrites align-items: center; and put the green item at the end(to down => because it aligns(moves) the item vertically) */
+        /* align-self: start; just like in flexbox => This overwrites align-items: center; and put the green item at the start (to top => because it aligns(moves) the item vertically) */
+
+        justify-self: end; /* just like in flexbox => This overwrites justify-self: center; and put the green item at the end(to right(corner) => because it aligns(moves) the item horizontally) */
+      }
     </style>
   </head>
   <body>
