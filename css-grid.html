@@ -173,6 +173,18 @@
         /*BELOW FEATURE IS COMPLETE NEW AND WE DIDN'T HAVE SUCH FEATURE IN FLEXBOX: THIS BELONG ONLY TO GRID LAYOUT:*/
         /*ALIGN VERTICALLY*/
         align-content: center; /*align the grid layout exactly in the middle of grid container!*/
+        /* align-content: space-between;
+        align-content: start; => in flexbox is flex-start => here is only start and not grid-start
+        align-content: end; => in flexbox is flex-end => here is only end and not grid-end*/
+
+        /*Aligning items INSIDE cells: moving items around inside cells: */
+        /* align-items: stretch; it is stretched from TOP to BUTTON => in VERTICAL direction.  This is default - exactly like flexbox */
+        align-items: center;
+        /* the grid items are centered VERTICALLY! */
+
+        /* justify-items: stretch; it is stretched from LEFT to RIGHT => in HORIZONTAL direction. This is default - exactly like flexbox */
+        justify-items: center;
+        /* the grid items are centered HORIZONTALLY! */
       }
     </style>
   </head>
