@@ -162,10 +162,17 @@
         grid-template-rows: repeat(2, 1fr); */
         grid-template-columns: 125px 200px 125px;
         grid-template-rows: 250px 100px;
+        gap: 50px;
 
         /*Aligning tracks inside container: distribute empty space: Our Grid Layout is smaller than the Container layout => that's why we see a lot of black empty space as Grid Container around the Grid layout!*/
-        justify-content: center; /*exactly the same like flexbox: it centerize the grid layout in vertical direction(cross axis)*/
-        /* justify-content: space-between; */
+
+        /*ALIGN HORIZONTALLY*/
+        justify-content: center; /*exactly the same like flexbox: it centerize the grid layout in horizontal direction(main axis)*/
+        /* justify-content: space-between; This is also the same like flexbox*/
+
+        /*BELOW FEATURE IS COMPLETE NEW AND WE DIDN'T HAVE SUCH FEATURE IN FLEXBOX: THIS BELONG ONLY TO GRID LAYOUT:*/
+        /*ALIGN VERTICALLY*/
+        align-content: center; /*align the grid layout exactly in the middle of grid container!*/
       }
     </style>
   </head>
